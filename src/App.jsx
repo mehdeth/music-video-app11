@@ -1132,13 +1132,7 @@ const withRetry = async (fn, maxRetries = 3, context = '') => {
 /* -------------------------------------------------------------------------- */
 /* API HANDLERS                                */
 /* -------------------------------------------------------------------------- */
-const API_KEY = ""; // Automatically handled by environment
 
-// Initialize Firebase with Safety Check
-const firebaseConfig = JSON.parse(typeof __firebase_config !== 'undefined' ? __firebase_config : '{}');
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
 
 // Helper for delays
 const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms));
